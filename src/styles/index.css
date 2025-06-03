@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --wine:        #311b56;  /* mauve */
+  --wine-dark:   #0F081B;  /* mauve dark */
+  --wine-light:  #522D90;  /* mauve light */
+  --gold: #D4AF37;
+  --gold-light: #F1D78F;
+  --cream: #FFF8E8;
+  --grey-light: #F5F5F5;
+  --grey: #CCCCCC;
+  --black: #111111;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  @apply bg-white text-gray-900 overflow-x-hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl lg:text-6xl;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl lg:text-5xl;
+}
+
+h3 {
+  @apply text-2xl md:text-3xl lg:text-4xl;
+}
+
+h4 {
+  @apply text-xl md:text-2xl lg:text-3xl;
+}
+
+p, li {
+  @apply text-lg leading-relaxed;
+}
+
+/* Custom classes */
+.section {
+  @apply py-16 md:py-24;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.btn {
+  @apply inline-block px-6 py-3 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-primary {
+  @apply bg-[var(--wine)] text-white hover:bg-[var(--wine-dark)] focus:ring-[var(--wine)];
+}
+
+.btn-secondary {
+  @apply bg-[var(--gold)] text-black hover:bg-[var(--gold-light)] focus:ring-[var(--gold)];
+}
+
+.btn-outline {
+  @apply border-2 border-[var(--wine)] text-[var(--wine)] hover:bg-[var(--wine)] hover:text-white focus:ring-[var(--wine)];
+}
+
+.card {
+  @apply bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl;
+}
+
+/* Animation utility classes */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Custom scroll bar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--grey-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--wine);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--wine-dark);
+}
+
+/* Wine gradient background */
+.bg-wine-gradient {
+  background: linear-gradient(135deg, var(--wine) 0%, var(--wine-dark) 100%);
+}
+
+/* Gold gradient background */
+.bg-gold-gradient {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+}
+
+/* Cream gradient background */
+.bg-cream-gradient {
+  background: linear-gradient(135deg, var(--cream) 0%, white 100%);
+}
+
+/* Text gradient */
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, var(--wine) 0%, var(--gold) 100%);
+}
