@@ -4,7 +4,6 @@ import Footer from './components/layout/Footer'
 import ScrollToTop from './components/ui/ScrollToTop'
 import Preloader from './components/ui/Preloader'
 import HomePage from './pages/HomePage'
-import AboutPage from './pages/AboutPage'
 import TeamPage from './pages/TeamPage'
 import ProgramsPage from './pages/ProgramsPage'
 import { useState, useEffect } from 'react'
@@ -31,10 +30,8 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
             <Route path="/team" element={<TeamPage />} />
             <Route path="/programs" element={<ProgramsPage />} />
-         
           </Routes>
         </main>
         <Footer />
