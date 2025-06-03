@@ -8,8 +8,7 @@ const HomePage = () => {
     <>
       <Hero />
       
-      {/* About Section */}
-      <section className="py-20 overflow-hidden">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -19,15 +18,15 @@ const HomePage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-bold mb-5">
-              <span className="text-wine">About</span> Us
+              <span className="text-wine">Our Vision</span>
             </h2>
             <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
             <p className="max-w-3xl mx-auto text-xl text-gray-700">
-              We are an African, women‑led nonprofit hacking everyday technology and innovation so it finally works for <em>all</em> of us.
+              A world where women's innovative capacity drives every technology—and every policy it inspires—to serve and treat everyone equitably.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -35,19 +34,11 @@ const HomePage = () => {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="aspect-w-4 aspect-h-3">
-                <img 
-                  src="/src/assets/image.png" 
-                  alt="Women in technology" 
-                  className="rounded-xl object-cover h-full w-full shadow-xl"
-                />
-              </div>
-              
-              <div className="absolute bottom-10 right-10 bg-wine text-white p-5 rounded-xl shadow-lg max-w-xs">
-                <h4 className="text-xl font-bold mb-2">Our Mission</h4>
-                <p>To enable women-led technology and innovation that is inclusive, accessible, and culturally relevant for all.</p>
-              </div>
-              
+              <img 
+                src="/src/assets/image.png"
+                alt="Women in technology" 
+                className="rounded-xl shadow-xl w-full h-auto"
+              />
               <div className="absolute -bottom-4 -right-4 w-full h-full border-4 border-gold rounded-xl z-[-1]"></div>
             </motion.div>
 
@@ -58,9 +49,9 @@ const HomePage = () => {
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-2xl font-bold text-wine mb-4">Why We Exist</h3>
+                <h3 className="text-2xl font-bold text-wine mb-4">Our Mission</h3>
                 <p className="text-lg text-gray-700">
-                  Too much of today's tech and innovation systems, were built without women—especially African women—in mind. We're here to flip that script.
+                  To enable women-led technology and innovation that is inclusive, accessible, and culturally relevant for all.
                 </p>
               </motion.div>
               
